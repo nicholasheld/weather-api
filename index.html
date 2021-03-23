@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 
-    <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style.css" />
     <title>Weather API</title>
 </head>
 
@@ -17,19 +17,115 @@
         <p class="lead">A weather outlook app to track your destination cities</p>
     </header>
 <!--This will be the city search bar and append items that have been searched below, stored locally-->
-    <nav class="navbar navbar-light bg-light">
+<div class="container">
+    <div class="row" >
+      <div class="col-sm-4">        <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand">Search for a city</a>
           <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <input id ="search-value" class="form-control me-2" type="search" placeholder="City" aria-label="Search">
+            <button id ="search-button"class="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>
       </nav>
+    <div id ="list"> <ul>Recent Searches</ul>
+    <!--This is where the search history should go and append an li-->
 
-      <div class="test">
-          <h1 id="cityId">City ID</h1>
-      </div>
+  </div>
+</div>
+
+
+      <div class="col-sm-8" class="test">
+          <div id = "box1" >
+        <h1 id="cityId">City (Date)</h1>
+        <li>Temperature: "Post"</li>
+        <li>Humidity: </li>
+        <li>Wind Speed:</li>
+        <li>UV Index:</li>
+    </div>
+    <div id="box2"><div class="container">
+        <h1>5-Day Forecast:</h1>
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Date 1</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">Temp:</li>
+                </ul>
+                <div class="card-footer">
+                 Humidity:
+                </div>
+              </div>
+              
+          <br>
+          </div>
+          
+
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Day 2</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-footer">
+                  Card footer
+                </div>
+              </div>
+              <br>
+          </div>
+
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Day 3</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-footer">
+                  Card footer
+                </div>
+              </div>
+              <br>
+          </div>
+
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Day 4</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-footer">
+                  Card footer
+                </div>
+              </div>
+              <br>
+
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Day 5</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-footer">
+                  Card footer
+                </div>
+              </div>
+    
+          </div>
+        </div>
+
+
+    </div>
+    </div>
+    </div> 
+</div> 
+
+ 
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
