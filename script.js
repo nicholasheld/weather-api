@@ -1,8 +1,10 @@
-var listE1 = document.querySelector('#list')
+var listE1 = document.querySelector('#list');
+var tableBody = document.getElementById('city-table');
 
 $(document).ready(() => {
     $("#search-button").on("click", function (event) {
      event.preventDefault();
+     //add to local storage and get to append table
       //  alert("buttonClick")
         var city = $('#search-value').val()
         console.log(city);
@@ -11,13 +13,24 @@ $(document).ready(() => {
             success: function (result) {
                 console.log("hello World");
                 console.log(result);
-                var createList = documnet.createElecment("li");
-                document.getElementById('#search-value')
+  //              localStorage.setItem("result", "");
+  //append details  
+var createTableRow = document.createElement('tr');
+var tableData = document.createElement('td');
+
+tableData.textContent = (city);
+
+createTableRow.appendChild(tableData);
+tableBody.appendChild(createTableRow);
+
+
             }
         })
     })
 })
 
+//                var createList = documnet.createElecment("li");
+// document.getElementById('#search-value')
 
 
 /*
