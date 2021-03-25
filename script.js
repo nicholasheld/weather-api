@@ -1,5 +1,6 @@
 var listE1 = document.querySelector('#list');
 var tableBody = document.getElementById('city-table');
+var cityBox1 = document.querySelector('#cityId');
 
 $(document).ready(() => {
     $("#search-button").on("click", function (event) {
@@ -11,7 +12,6 @@ $(document).ready(() => {
         $.ajax({
             url: `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=ddb3fdcf857d1a6f4caecf9c07c0201d`,
             success: function (result) {
-                console.log("hello World");
                 console.log(result);
   //              localStorage.setItem("result", "");
   //append details  
@@ -22,16 +22,15 @@ tableData.textContent = (city);
 
 createTableRow.appendChild(tableData);
 tableBody.appendChild(createTableRow);
+//This changes the city name to what was searched
+cityBox1.append(city);
+
 
 
             }
         })
     })
 })
-
-//                var createList = documnet.createElecment("li");
-// document.getElementById('#search-value')
-
 
 /*
 
