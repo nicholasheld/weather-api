@@ -29,7 +29,7 @@ $(document).ready(() => {
                 createTableRow.appendChild(tableData);
                 tableBody.appendChild(createTableRow);
                 //This changes the city name to what was searched
-                cityBox1.append(city + (moment().format("MMM Do YY")));
+                cityBox1.append(city +' ', moment().format("dddd, MMMM Do YYYY"));
                 //attempting to append temp 1 in box 1
                 temp.append(result.main.temp + ' °F');
                 humi.append(result.main.humidity + ' %');
@@ -56,10 +56,10 @@ $(document).ready(() => {
                         var card = html`
 
                         <div class="card text-white bg-primary mb-3" style="width: 18rem;">
-                        <div class="card-header"> Date: ${result.list[i].clouds.dt_txt} </div>
+                        <div class="card-header"> Date: ${result.list[i].dt_txt} </div>
                         <ul class="list-group list-group-flush">
-                        <li class="list-group-item text-white bg-primary mb-3"> Temp: ${result.list[i].main.temp} + ' °F'</li>
-                        <li class="list-group-item text-white bg-primary mb-3">Humidity: ${result.list[i].main.humidity}+ ' %'</li>
+                        <li class="list-group-item text-white bg-primary mb-3"> Temp: ${result.list[i].main.temp}  °F</li>
+                        <li class="list-group-item text-white bg-primary mb-3">Humidity: ${result.list[i].main.humidity} %</li>
                       </ul>
                         
                     </div>`;
